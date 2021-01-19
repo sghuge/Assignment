@@ -1,0 +1,76 @@
+.header {
+    overflow: hidden;
+    padding: 63px 10px 20px;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 10px;
+    }
+  }
+  
+  .header a {
+    float: left;
+    text-align: center;
+    padding: 0 12px;
+    text-decoration: none;
+    font-size: 25px; 
+    font-family: Open Sans;
+    letter-spacing: 0px;
+  color: #222222;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  
+  .header-right {
+    float: right;
+  }
+
+  ::ng-deep {
+    .ui-button {
+        outline: none;
+
+        &.login {
+            box-shadow: 0px 0px 20px #00000033;
+border: 2px solid #663399;
+border-radius: 24px;
+width: 70px;
+height: 36px;
+background-color: transparent;
+color: #663399;
+font-size: 15px;
+font-family: Montserrat;
+font-weight: 500;
+margin-right: 24px;
+
+&.get-started {
+    width: 120px;
+}
+
+&:hover {
+    background-color: #663399 !important;
+    border: 2px solid #663399 !important;
+color: #FFF !important;
+}
+        }
+
+        
+    }
+    
+}
+  
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+  }

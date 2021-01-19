@@ -1,0 +1,117 @@
+<div class="ui-g main-content">
+  <div class="ui-g-12 p0">
+    <app-header></app-header>
+    
+    <div class="circle"></div>
+    <div class="ui-g-12 p0 postn-reltv">
+      <div class="ui-g p40">
+        <div class="ui-g-6">
+          <div class="circle-left"></div>
+          <div class="postn-reltv">
+              <img class="img-video" src="assets/collect_img-video.png" alt="">
+              <div class="dot-img"></div>
+              <div class="line super-head">
+                <h3>We make it super simple</h3>
+                  <img src="assets/Line 3.png" alt="">
+                </div>
+          </div>
+        </div>
+        <div class="ui-g-6">
+          <div class="flex-wrap">
+            <div class="calculator-wrap">
+              <p class="head">Eligibity Calculator</p>
+              <div class="p30">
+                <div class="pb20">
+                    <label for="">Monthly Income</label>
+                    <p>{{selectedRange | currency:'INR':'symbol':'1.0'}}</p>
+                  <p-slider [(ngModel)]="selectedRange" [min]="100000" [max]="300000"></p-slider>
+                  <div class="flex-wrap justify-center opacity">
+                    <div>{{startRange | currency:'INR':'symbol':'1.0'}}</div>
+                    <div class="text-right">{{endRange | currency:'INR':'symbol':'1.0'}}</div>
+                  </div>
+                </div>
+              <div class="pb20">
+                  <label>Monthly Expense</label>
+                  <p>{{selectedMonthlyRange | currency:'INR':'symbol':'1.0'}}</p>
+                  <p-slider [min]="1" [(ngModel)]="selectedMonthlyRange" [max]="selectedRange"></p-slider>
+              </div>
+              <div class="pb20">
+                  <label for="">Repayment Tenure</label>
+                  <!-- <p-dropdown [options]="paymentTimeArray" placeholder="Select Payment Tenure" [showClear]="true"></p-dropdown> -->
+              </div>
+              <div class="pb20">
+                  <div class="flex-wrap justify-center">
+                      <div>Do you have ant existing loans?</div>
+                      <div class="toggler">
+                          <p-inputSwitch (onChange)="handleChange($event)" [(ngModel)]="toggleVal"></p-inputSwitch>
+                      </div>
+                    </div>
+              </div>
+              
+              <div *ngIf="toggleVal">
+                <div class="pb20">
+                    <label for="">EMI of existing loan (optional)</label>
+                    <input type="text" pInputText />
+                </div>
+              </div>
+              </div>
+
+              <div class="dot-img postn"></div>
+            </div>
+
+            <div class="side-loan-wrap">
+              <label class="lbl">Loan Amount</label>
+              <p>{{loanAmount | currency:'INR':'symbol':'1.0'}}</p>
+              <label class="lbl">Your EMI will be</label>
+              <p>{{Emi | currency:'INR':'symbol':'1.0'}}</p>
+              <button pButton type="button" label="Get Money" class="get-money-btn"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-img">
+        <div class="ui-g">
+          <div class="ui-g-7">
+            <div class="ui-g">
+              <div class="ui-g-6" >
+                  <div class="ui-g">
+                    <div class="ui-g-12" *ngFor="let item of items">
+                        <div class="box">
+                            <img [src]="item.img" alt="">
+                            <p class="sub-head">{{item.title}}</p>
+                            <p class="sub-text">{{item.para}}</p>
+                          </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="ui-g-6" >
+                  <div class="ui-g">
+                    <div class="ui-g-12 " [ngClass]="{'mt130': i==0}" *ngFor="let item of datas; let i = index">
+                        <div class="box">
+                            <img [src]="item.img" alt="">
+                            <p class="sub-head">{{item.title}}</p>
+                            <p class="sub-text">{{item.para}}</p>
+                          </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui-g-5">
+            <h3 class="boost-business-heading">Boost your business with Open</h3>
+            <div class="line">
+              <img src="assets/Line 3.png" alt="">
+            </div>
+            <p class="boost-business-subtext">Get your hands on team loan that's crafted for your business.</p>
+            
+            <button pButton type="button" label="Get an Open Account" class="get-open-btn"></button>
+          </div>
+          </div>
+      </div>
+      
+
+          <!-- <div class="ui-g-12 footer-img"></div> -->
+    </div>
+  </div>
+</div>
