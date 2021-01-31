@@ -90,9 +90,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: -116px;
-  right: -199px;
-  width: 937px;
+  top: -194px;
+  right: -156px;
+  width: 1078px;
   height: 895px;
 }
 
@@ -206,6 +206,7 @@
     width: 100%;
     height: 253px;
     padding: 34px;
+    margin-bottom: 44px;
 
     &:hover {
       background-color: rgba(125, 70, 180, 0.5);
@@ -220,9 +221,11 @@
         color: #fff;
       }
 
-    img {
-      padding-bottom: 19px;
-    }
+    
+  }
+
+  img {
+    padding-bottom: 19px;
   }
 }
 

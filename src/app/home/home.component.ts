@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   startRange = 150000;
   endRange = 300000;
   rangeValues: number[] = [100000,300000];
-  toggleVal = false;
+  toggleVal = true;
   loanAmount = 100000;
   Emi = 15000;
 
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
   }
 
   handleChange(e) {
-    this.toggleVal = e.checked;
+    // this.toggleVal = e.checked;
   }
 
 }

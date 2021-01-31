@@ -43,7 +43,7 @@
                   <div class="flex-wrap justify-center">
                       <div>Do you have ant existing loans?</div>
                       <div class="toggler">
-                          <p-inputSwitch (onChange)="handleChange($event)" [(ngModel)]="toggleVal"></p-inputSwitch>
+                          <p-inputSwitch (onChange)="handleChange($event)"></p-inputSwitch>
                       </div>
                     </div>
               </div>
@@ -51,7 +51,7 @@
               <div *ngIf="toggleVal">
                 <div class="pb20">
                     <label for="">EMI of existing loan (optional)</label>
-                    <input type="text" pInputText onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                    <input type="text" [placeholder]="Emi | currency:'INR':'symbol':'1.0'" pInputText onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
                 </div>
               </div>
               </div>

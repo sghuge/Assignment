@@ -1,27 +1,31 @@
 .header {
   overflow: hidden;
-  padding: 63px 10px 20px;
+  padding: 30px 10px 20px;
   position: relative;
   z-index: 9;
 
   img {
     position: absolute;
     top: 10px;
+    width: 80px;
+    height: 80px;
+    margin-left: 100px;
   }
 }
 
 .header a {
   float: left;
   text-align: center;
-  padding: 0 12px;
+  padding: 0 25px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 18px;
   font-family: Open Sans;
   letter-spacing: 0;
+  font-weight: 500;
   color: #222;
 
   &:hover {
-    text-decoration: underline;
+    color: var(--purple);
   }
 }
 
@@ -32,6 +36,8 @@
 
 .header-right {
   float: right;
+  display: flex;
+    align-items: center;
 }
 
 ::ng-deep {
@@ -41,25 +47,45 @@
     &.login {
       box-shadow: 0px 0px 20px #00000033;
       border: 2px solid #663399;
+      min-height: 40px;
       border-radius: 24px;
-      width: 75px;
-      height: 36px;
+      min-width: 120px;
       background-color: transparent;
       color: #663399;
       font-size: 15px;
       font-family: Montserrat;
       font-weight: 500;
-      margin-right: 15px;
-      margin-left: 10px;
+      margin-right: 20px;
+      margin-left: 50px;
 
-      &.get-started {
-        width: 130px;
-      }
-
+      
       &:hover {
         background-color: #663399 !important;
         border: 2px solid #663399 !important;
         color: #fff !important;
+      }
+    }
+
+    &.get-started {
+      box-shadow: 0px 0px 20px #00000033;
+      min-height: 40px;
+      border-radius: 24px;
+      min-width: 120px;
+      background: linear-gradient(
+90deg
+, #9f62c9 0, #663399 100%);
+      border: none;
+      font-size: 15px;
+      font-family: Montserrat;
+      font-weight: 500;
+      color: #fff;
+      margin-right: 50px;
+
+      &:enabled {
+        &:hover {
+          background: #4c2574;
+          color: #fff;
+        }
       }
     }
   }
