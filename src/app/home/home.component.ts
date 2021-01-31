@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class HomeComponent implements OnInit {
   val1 = 0;
   paymentTimeArray = [];
   items;
@@ -42,7 +42,6 @@ export class DashboardComponent implements OnInit {
 
   handleChange(e) {
     this.toggleVal = e.checked;
-    console.log(e.checked);
   }
 
 }

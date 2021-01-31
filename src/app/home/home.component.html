@@ -37,7 +37,16 @@
               </div>
               <div class="pb20">
                   <label for="">Repayment Tenure</label>
-                  <!-- <p-dropdown [options]="paymentTimeArray" placeholder="Select Payment Tenure" [showClear]="true"></p-dropdown> -->
+                  <!-- <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">HTML</a></li>
+                      <li><a href="#">CSS</a></li>
+                      <li><a href="#">JavaScript</a></li>
+                    </ul>
+                  </div> -->
+                  <!-- <p-dropdown [options]="paymentTimeArray" placeholder="Select Payment Tenure" ></p-dropdown> -->
               </div>
               <div class="pb20">
                   <div class="flex-wrap justify-center">
@@ -51,7 +60,7 @@
               <div *ngIf="toggleVal">
                 <div class="pb20">
                     <label for="">EMI of existing loan (optional)</label>
-                    <input type="text" pInputText />
+                    <input type="text" pInputText onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
                 </div>
               </div>
               </div>
@@ -76,7 +85,7 @@
             <div class="ui-g">
               <div class="ui-g-6" >
                   <div class="ui-g">
-                    <div class="ui-g-12" *ngFor="let item of items">
+                    <div class="ui-g-12 back-image" *ngFor="let item of items">
                         <div class="box">
                             <img [src]="item.img" alt="">
                             <p class="sub-head">{{item.title}}</p>
@@ -87,7 +96,7 @@
               </div>
               <div class="ui-g-6" >
                   <div class="ui-g">
-                    <div class="ui-g-12 " [ngClass]="{'mt130': i==0}" *ngFor="let item of datas; let i = index">
+                    <div class="ui-g-12 back-image" [ngClass]="{'mt130': i==0}" *ngFor="let item of datas; let i = index">
                         <div class="box">
                             <img [src]="item.img" alt="">
                             <p class="sub-head">{{item.title}}</p>
@@ -98,7 +107,7 @@
               </div>
             </div>
           </div>
-          <div class="ui-g-5">
+          <div class="ui-g-5 m-auto">
             <h3 class="boost-business-heading">Boost your business with Open</h3>
             <div class="line">
               <img src="assets/Line 3.png" alt="">
